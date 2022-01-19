@@ -53,23 +53,13 @@
                         <div class="artists-container">
                             <p class="title"><strong>Art by:</strong></p>
                             <div class="artists">
-                                @foreach ($comics['artists'] as $artist)
-                                    <a href="#">{{$artist}}</a>
-                                    @if(!$loop->last)
-                                        <span>,</span>
-                                    @endif
-                                @endforeach
+                                
                             </div>    
                         </div>
                         <div class="writers-container">
                             <p class="title"><strong>Written by:</strong></p>
                             <div class="writers">
-                                @foreach ($comics['writers'] as $writer)
-                                    <a href="#">{{$writer}}</a>
-                                    @if(!$loop->last)
-                                        <span>,</span>
-                                    @endif
-                                @endforeach
+                                
                             </div>    
                         </div>
                     </div>

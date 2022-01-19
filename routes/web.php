@@ -61,4 +61,9 @@ Route::get('/shop', function () {
 })->name('single');
  */
 
-Route::get('/single/{key}/{name}', [SingleController::class, 'show'])->name('single');
+Route::get('/single/{key}/{name}', 'SingleController@show')->name('single');
+
+
+Route::get('/', 'ComicController@index')->name('comics');
+
+Route::get('/comics/{comic}' , 'ComicController@show')->name('single');
