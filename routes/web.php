@@ -61,9 +61,22 @@ Route::get('/shop', function () {
 })->name('single');
  */
 
-Route::get('/single/{key}/{name}', 'SingleController@show')->name('single');
-
-
 Route::get('/', 'ComicController@index')->name('comics');
 
 Route::get('/comics/{comic}' , 'ComicController@show')->name('single');
+
+//posts//
+
+Route::get('posts' , 'Admin\Postcontroller@index')->name('admin.posts.index');
+
+Route::get('posts/create' , 'Admin\PostController@create')->name('admin.posts.create');
+
+Route::post('posts/update' , 'Admin\PostController@store')->name('admin.posts.store');
+
+Route::get('posts/{post}' , 'Admin\PostController@show')->name('admin.posts.show');
+
+Route::get('posts/{post}/edit' , 'Admin\PostController@edit')->name('admin.posts.edit');
+
+Route::put('posts/{post}' , 'Admin\PostController@update')->name('admin.post.update');
+
+Route::delete('posts/{post}' , 'Admin\PostController@destroy')->name('admin.posts.destroy');

@@ -2,5 +2,7 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/comics.css": "/css/comics.css",
+    "/css/adminIndex.css": "/css/adminIndex.css",
+    "/css/adminCreate.css": "/css/adminCreate.css",
     "/css/single.css": "/css/single.css"
 }

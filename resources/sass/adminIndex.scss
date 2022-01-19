@@ -1,0 +1,44 @@
+main{
+
+    .table-container{
+
+        .table{
+            padding: 2rem 5rem;
+
+            .row{
+                display: flex;
+                border-bottom: 1px solid black;
+
+                &>div{
+                    width: calc(33.33333% - 1rem) ;
+                    border-right: 1px solid black;
+                    padding: 0.5rem 0;
+                    padding-left: 5px;
+                }
+                .id{
+                    width: 3rem;
+                    border-left: 1px solid black;
+                }
+            }
+
+            .row:first-of-type{
+                border-top: 1px solid black;
+            }
+        }
+    }
+
+    .pagination{
+
+        nav{
+    
+            ul{
+                display: flex;
+                list-style-type: none;
+
+                a{
+                    margin: 0 1rem;
+                }
+            }
+        }
+    }
+}
