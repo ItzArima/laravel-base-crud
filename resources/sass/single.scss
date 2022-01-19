@@ -1,0 +1,204 @@
+$site_blue: #0282f9;
+$site_x_padding: 0 10rem;
+
+main{
+
+    .jumbo-container{
+        height: 500px;
+
+        img{
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+            object-position: center 0;
+        }
+    }
+
+    .blue-bar{
+        background-color: $site_blue;
+        position: relative;
+        height: 75px;
+
+        .card{
+            position: absolute;
+            width: 13%;
+            bottom: 50%;
+            left: 12rem;
+            border: 2px solid white; /* sometimes glitches */
+            color: white;
+
+            img{
+                width: 100%;
+            }
+
+            .top{
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color:#00a9d9;
+                padding: 0 0.5rem;
+            }
+
+            .bottom{
+                position: absolute;
+                bottom: 0;
+                background-color: #00a9d9;
+                width: 100%;
+                text-align: center;
+            }
+        }    
+    }
+
+
+    .single-content{
+        padding: 3rem 12rem;
+
+        .description-container{
+            display: flex;
+
+            .description{
+                padding-right: 3rem;
+
+                .title{
+                    color: #003f5e;
+                    margin-bottom: 1.5rem;
+                }
+
+                .green-bar{
+                    background-color: #55ba59;
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #357739;
+                    margin-bottom: 1rem;
+
+                    .left{
+                        border-right: 1px solid #357739;
+                        flex-grow: 1;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0.5rem 1rem;
+                        
+                        p{
+                            color: #baf890;
+
+                            em{
+                                font-style: normal;
+                                color: white;
+                            }
+                        }
+                    }
+
+                    .right{
+                        padding: 0.5rem 1rem;
+                        color: white;
+                    }
+                }
+            }
+
+            .advertisement{
+
+                h4{
+                    text-align: right;
+                    color: #555555;
+                }
+            }
+        }
+    }
+
+    .single-info{
+        background-color: #f6f6f6;
+        border-top: 1px solid lightgrey;
+
+        .info-centered{
+            padding: 0 12rem;
+
+            .info-content{
+                display: flex;
+                padding-top: 1.5rem;
+                padding-bottom: 5rem;
+
+                .title{
+                    width: 30%;
+                    color: #003f5e;
+                }
+
+                .talent{
+                    width: 50%;
+
+                    h2{
+                        border-bottom: 1px solid lightgrey;
+                        padding-bottom: 1.5rem;
+                        color: #003f5e;
+                    }
+
+                    .artists-container, .writers-container{
+                        display: flex;
+                        justify-content: space-between;
+                        border-bottom: 1px solid lightgrey;
+                        padding: 0.5rem 0;
+
+                        .artists, .writers{
+                            width: 70%;
+
+                            a{
+                                text-decoration: none;
+                                color: #00a9d9;
+                            }
+                        }
+                    }
+                }
+
+                .specs{
+                    width: 50%;
+                    padding-left: 3rem;
+
+                    h2{
+                        border-bottom: 1px solid lightgrey;
+                        padding-bottom: 1.5rem;
+                        color: #003f5e;
+                    }
+
+                    .series, .price, .sale{
+                        display: flex;
+                        border-bottom: 1px solid lightgrey;
+                        padding: 0.5rem 0;
+
+                        a{
+                            text-decoration: none;
+                            color: #00a9d9;
+                        }
+                    } 
+                }
+            }  
+        } 
+        
+        .info-footer{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 12rem;
+            border-top: 1px solid lightgrey;
+
+            .info-link{
+                width: 25%;
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem;
+                border-left: 1px solid lightgrey;
+                cursor: pointer;
+
+                img{
+                    height: 50px;
+                    filter: invert(1) opacity(0.3);
+                }
+
+                h4{
+                    filter: opacity(0.3);
+                }
+            }
+
+            .info-link:last-of-type{
+                border-right: 1px solid lightgrey;
+            }
+        }   
+    }
+}
