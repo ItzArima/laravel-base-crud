@@ -14,56 +14,25 @@ use App\Http\Controllers\SingleController;
 |
 */
 
-Route::get('/', function () {
-    $comicses = config('db');
-    return view('comics', compact('comicses'));
-})->name('comics');
+Route::get('/', 'ComicController@home')->name('comics');
 
-Route::get('/characters', function () {
-    return view('characters');
-})->name('characters');
+Route::get('/characters', 'ComicController@characters')->name('characters');
 
-Route::get('/movies', function () {
-    return view('movies');
-})->name('movies');
+Route::get('/movies', 'ComicController@movies')->name('movies');
 
-Route::get('/tv', function () {
-    return view('tv');
-})->name('tv');
+Route::get('/tv', 'ComicController@tv')->name('tv');
 
-Route::get('/games', function () {
-    return view('games');
-})->name('games');
+Route::get('/games', 'ComicController@games')->name('games');
 
-Route::get('/collectibles', function () {
-    return view('collectibles');
-})->name('collectibles');
+Route::get('/collectibles', 'ComicController@collectibles')->name('collectibles');
 
-Route::get('/videos', function () {
-    return view('videos');
-})->name('videos');
+Route::get('/videos', 'ComicController@videos')->name('videos');
 
-Route::get('/fans', function () {
-    return view('fans');
-})->name('fans');
+Route::get('/fans', 'ComicController@fans')->name('fans');
 
-Route::get('/news', function () {
-    return view('news');
-})->name('news');
+Route::get('/news', 'ComicController@news')->name('news');
 
-Route::get('/shop', function () {
-    return view('shop');
-})->name('shop');
-
-/* Route::get('/single/{id}', function ($id) {
-    $comics = config('db');
-    return view('single',compact('comics','id'));
-})->name('single');
- */
-
-Route::get('/', 'ComicController@index')->name('comics');
-
-Route::get('/comics/{comic}' , 'ComicController@show')->name('single');
+Route::get('/shop', 'ComicController@shop')->name('shop');
 
 //posts//
 
@@ -73,7 +42,7 @@ Route::get('posts/create' , 'Admin\PostController@create')->name('admin.posts.cr
 
 Route::post('posts/update' , 'Admin\PostController@store')->name('admin.posts.store');
 
-Route::get('posts/{post}' , 'Admin\PostController@show')->name('admin.posts.show');
+Route::get('posts/{comic}' , 'Admin\PostController@show')->name('admin.posts.show');
 
 Route::get('posts/{post}/edit' , 'Admin\PostController@edit')->name('admin.posts.edit');
 

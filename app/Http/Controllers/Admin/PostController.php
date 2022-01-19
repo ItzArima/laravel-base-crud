@@ -56,9 +56,10 @@ class PostController extends Controller
      * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function show(Comic $comic)
+    public function show($comic)
     {
-        //
+        $comics = Comic::find($comic);
+        return view('admin/show' , compact('comics'));
     }
 
     /**

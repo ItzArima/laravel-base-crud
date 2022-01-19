@@ -11,7 +11,7 @@
         </div>
         <div class="blue-bar">
             <div class="card">
-                <img src="{{$comics['thumb']}}" alt="">
+                <img src="{{$comics->thumb}}" alt="">
                 <div class="top">
                     <p>COMIC BOOK</p>
                 </div>
@@ -28,7 +28,7 @@
                     </div>
                     <div class="green-bar">
                         <div class="left">
-                            <p>U.S. Price <em>{{$comics['price']}}</em></p>
+                            <p>U.S. Price <em>{{$comics->price}}</em></p>
                             <p>AVIABLE</p>
                         </div>
                         <div class="right">
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="desc-text">
-                        <p>{{$comics['description']}}</p>
+                        <p>{{$comics->description}}</p>
                     </div>
                 </div>
                 <div class="advertisement">
@@ -67,17 +67,17 @@
                         <h2>Specs</h2>
                         <div class="series">
                             <p class="title"><strong>Series</strong></p>
-                            <a href="#">{{$comics['series']}}</a>
+                            <a href="#">{{$comics->series}}</a>
                         </div>
                         <div class="price">
                             <p class="title"><strong>U.S. Price:</strong></p>
-                            <p>{{$comics['price']}}</p>
+                            <p>{{$comics->price}}</p>
                         </div>
                         <div class="sale">
                             <p class="title"><strong>On Sale Date:</strong></p>
                             <p>
                                 <?php 
-                                    echo date("F d Y" , strtotime($comics['sale_date'])) 
+                                    echo date("F d Y" , strtotime($comics->sale_date)) 
                                 ?>
                             </p>
                         </div>
