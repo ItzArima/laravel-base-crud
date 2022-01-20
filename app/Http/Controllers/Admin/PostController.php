@@ -81,12 +81,12 @@ class PostController extends Controller
      * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $comic)
+    public function update(Request $request, Comic $comic)
     {
         $data = $request->all();
 
-        $comic = update($data);
-        dd($comic);
+        $comic = Comic::find($comic);
+        $comic->update($data);
     }
 
     /**
@@ -95,7 +95,7 @@ class PostController extends Controller
      * @param  \App\Models\comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function destroy($comic)
+    public function destroy(comic $comic)
     {
         $comics = Comic::find($comic);
         $comics->delete();
