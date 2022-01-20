@@ -24,18 +24,28 @@ main{
                     display: flex;
                     justify-content: center;
 
-                    a{
-                        margin: 0 1rem;
-                        color: green;
-                        font-weight: 600;
+                    form{
+
+                        input{
+                            margin: 0 1rem;
+                            color: green;
+                            font-weight: 600;
+                            border: 0;
+                            background-color: transparent;
+                            text-decoration: underline;
+                        }
                     }
 
-                    a:first-of-type{
-                        color: black;
+                    form:first-of-type{
+                        input{
+                            color: black;
+                        }
                     }
 
-                    a:last-of-type{
-                        color: crimson;
+                    form:last-of-type{
+                        input{
+                            color: crimson;
+                        }
                     }
                 }
             }

@@ -7,7 +7,7 @@
     <main>
         <div class="form-container">
             <div class="title">
-                <h1>Create a new Comic</h1>
+                <h1>Edit The Comic</h1>
             </div>
             <form action="{{route('admin.posts.update' , $comic->id)}}" method="post">
                 @csrf

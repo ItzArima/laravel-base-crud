@@ -24,17 +24,20 @@ main .table-container .table .row .actions {
   justify-content: center;
 }
 
-main .table-container .table .row .actions a {
+main .table-container .table .row .actions form input {
   margin: 0 1rem;
   color: green;
   font-weight: 600;
+  border: 0;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
-main .table-container .table .row .actions a:first-of-type {
+main .table-container .table .row .actions form:first-of-type input {
   color: black;
 }
 
-main .table-container .table .row .actions a:last-of-type {
+main .table-container .table .row .actions form:last-of-type input {
   color: crimson;
 }
 
