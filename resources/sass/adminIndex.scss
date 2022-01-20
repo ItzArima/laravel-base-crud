@@ -1,4 +1,25 @@
+
+
 main{
+
+    .success{
+        position: absolute;
+        width: 15%;
+        left: 42.5%;
+        top: 95px;
+        color: white;
+        font-weight: 600;
+        background-color: green;
+        text-align: center;
+        padding: 0.5rem 0;
+        filter: opacity(1);
+        transition: all 1.5s;
+    }
+
+    .hide{
+        filter: opacity(0);
+    }
+
 
     .table-container{
 
@@ -8,6 +29,69 @@ main{
             .row{
                 display: flex;
                 border-bottom: 1px solid black;
+
+                .delete-popup{
+                    z-index: 99;
+                    backdrop-filter: brightness(0.5);
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    display: none;
+                    top: 0;
+                    left: 0;
+
+                    .content{
+                    position: relative;
+                    width: 50%;
+                    height: 50vh;
+                    left: 25%;
+                    top: 25vh;
+                    background-color: white;
+                    border: 2px solid black;
+                    border-radius: 10px;
+                    padding: 2rem;
+
+                        .abort{
+                            position: absolute;
+                            top: 2rem;
+                            right: 2rem;
+                            color: white;
+                            background-color: crimson;
+                            height: 30px;
+                            width: 30px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
+
+                        input{
+                            position: absolute;
+                            width: calc(100% - 4rem);
+                            bottom: 2rem;
+                            left: 2rem;
+                            background-color: transparent;
+                            border: 2px solid #0282f9;
+                            border-radius: 10px;
+                            color: black;
+                            transition: all 0.3s;
+                            padding: 0.5rem 0;
+                            font-weight: 600;
+                            cursor: pointer;
+
+                            &:hover{
+                                background-color: #0282f9;
+                                color: white;
+                            }
+                        }
+                    }   
+                }
+
+                .show{
+                    display: block !important;
+                }
+            
 
                 &>div{
                     width: calc(25% - 0.75rem) ;
@@ -23,6 +107,7 @@ main{
                 .actions{
                     display: flex;
                     justify-content: center;
+                    font-size: 15px;
 
                     form{
 
@@ -33,6 +118,8 @@ main{
                             border: 0;
                             background-color: transparent;
                             text-decoration: underline;
+                            font-size: 15px;
+                            cursor: pointer;
                         }
                     }
 
@@ -42,10 +129,12 @@ main{
                         }
                     }
 
-                    form:last-of-type{
-                        input{
-                            color: crimson;
-                        }
+                    p{
+                        color: crimson;
+                        font-size: normal;
+                        text-decoration: underline;
+                        margin: 0 1rem;
+                        cursor: pointer;
                     }
                 }
             }

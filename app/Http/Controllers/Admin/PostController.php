@@ -58,7 +58,7 @@ class PostController extends Controller
      */
     public function show(comic $comic)
     {
-        return view('admin/show' , compact('comics'));
+        return view('admin/show' , compact('comic'));
     }
 
     /**
