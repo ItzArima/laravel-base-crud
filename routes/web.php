@@ -44,8 +44,8 @@ Route::post('posts/update' , 'Admin\PostController@store')->name('admin.posts.st
 
 Route::get('posts/{comic}' , 'Admin\PostController@show')->name('admin.posts.show');
 
-Route::get('posts/{post}/edit' , 'Admin\PostController@edit')->name('admin.posts.edit');
+Route::get('posts/{comic}/edit' , 'Admin\PostController@edit')->name('admin.posts.edit');
 
-Route::put('posts/{post}' , 'Admin\PostController@update')->name('admin.post.update');
+Route::put('posts/{comic}' , 'Admin\PostController@update')->name('admin.posts.update');
 
-Route::delete('posts/{post}' , 'Admin\PostController@destroy')->name('admin.posts.destroy');
+Route::delete('posts/{comic}' , 'Admin\PostController@destroy')->name('admin.posts.destroy');

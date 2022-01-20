@@ -68,9 +68,10 @@ class PostController extends Controller
      * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comic $comic)
+    public function edit($comic)
     {
-        //
+        $comic = Comic::find($comic);
+        return view('admin/edit' , compact('comic'));
     }
 
     /**
@@ -80,9 +81,12 @@ class PostController extends Controller
      * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $comic)
+    public function update(Request $request, $comic)
     {
-        //
+        $data = $request->all();
+
+        $comic = update($data);
+        dd($comic);
     }
 
     /**
@@ -91,8 +95,10 @@ class PostController extends Controller
      * @param  \App\Models\comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function destroy(comic $comic)
+    public function destroy($comic)
     {
-        //
+        $comics = Comic::find($comic);
+        $comics->delete();
+        return redirect()->back()->with(session()->flash('success' , 'comic deleted'));
     }
 }

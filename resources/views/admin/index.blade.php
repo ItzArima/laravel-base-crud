@@ -23,6 +23,9 @@
                     <div class="series">
                         <h1>Series</h1>
                     </div>
+                    <div class="actions">
+                        <h1>Actions</h1>
+                    </div>
                 </div>
                 @foreach($comicses as $comics)
                     <div class="row">
@@ -37,6 +40,19 @@
                         </div>
                         <div class="series">
                             <p>{{$comics->series}}</p>
+                        </div>
+                        <div class="actions">
+                            <form action="{{route('admin.posts.show' , $comics->id)}}" method="get">
+                                <input type="submit" value="View">
+                            </form>
+                            <form action="{{route('admin.posts.edit' , $comics->id)}}">
+                                <input type="submit" value="Edit">
+                            </form>
+                            <form action="{{route('admin.posts.destroy' , $comics->id)}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" value="Delete">
+                            </form>
                         </div>
                     </div>
                 @endforeach
