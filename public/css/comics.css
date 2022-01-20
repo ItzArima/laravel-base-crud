@@ -31,7 +31,6 @@ main .comicses-container {
   display: flex;
   flex-wrap: wrap;
   padding: 0 9rem;
-  justify-content: space-between;
 }
 
 main .comicses-container .comics {
@@ -42,8 +41,13 @@ main .comicses-container .comics {
   color: white;
 }
 
-main .comicses-container .comics img {
+main .comicses-container .comics a {
+  width: 100%;
+}
+
+main .comicses-container .comics a img {
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 main .button-container {

@@ -47,10 +47,3 @@
         </div>
     </main>    
 @endsection
-
-@section('script')
-    <script>
-        let active = document.getElementById('comics');
-        active.classList.add('active');
-    </script>
-@endsection    
