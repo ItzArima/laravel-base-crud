@@ -14,25 +14,10 @@ use App\Http\Controllers\SingleController;
 |
 */
 
-Route::get('/', 'ComicController@home')->name('comics');
+Route::get('/', 'ComicController@home')->name('home');
 
-Route::get('/characters', 'ComicController@characters')->name('characters');
+Route::get('/comics', 'ComicController@comics')->name('comics');
 
-Route::get('/movies', 'ComicController@movies')->name('movies');
-
-Route::get('/tv', 'ComicController@tv')->name('tv');
-
-Route::get('/games', 'ComicController@games')->name('games');
-
-Route::get('/collectibles', 'ComicController@collectibles')->name('collectibles');
-
-Route::get('/videos', 'ComicController@videos')->name('videos');
-
-Route::get('/fans', 'ComicController@fans')->name('fans');
-
-Route::get('/news', 'ComicController@news')->name('news');
-
-Route::get('/shop', 'ComicController@shop')->name('shop');
 
 //posts//
 

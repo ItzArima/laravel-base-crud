@@ -22,4 +22,10 @@
             </form>
         </div>
     </main>
+@endsection  
+@section('script')
+    <script>
+        let links = document.getElementsByClassName('hlink');
+        links[2].classList.add('active')
+    </script>
 @endsection

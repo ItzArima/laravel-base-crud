@@ -104,7 +104,7 @@
 
 @section('script')
     <script>
-        let active = document.getElementById('comics');
-        active.classList.add('active');
+        let links = document.getElementsByClassName('hlink');
+        links[2].classList.add('active')
     </script>
 @endsection    

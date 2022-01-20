@@ -82,7 +82,9 @@
             </div>
         </div>
     </main>
+@endsection    
 
+@section('script')
     <script>
         function show(index){
             let popup = document.getElementsByClassName('delete-popup');
