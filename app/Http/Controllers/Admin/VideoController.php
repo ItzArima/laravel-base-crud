@@ -66,7 +66,7 @@ class VideoController extends Controller
      */
     public function edit(Video $video)
     {
-        //
+        return view('admin/edit' , compact('video'));
     }
 
     /**
@@ -78,7 +78,10 @@ class VideoController extends Controller
      */
     public function update(Request $request, Video $video)
     {
-        //
+        $data = $request->all();
+
+        $video->update($data);
+        return redirect()->route('admin.videos.index')->with(session()->flash('success' , 'edited succesfully'));//
     }
 
     /**
@@ -89,6 +92,7 @@ class VideoController extends Controller
      */
     public function destroy(Video $video)
     {
-        //
+        $video->delete();
+        return redirect()->back()->with(session()->flash('success' , 'video deleted'));
     }
 }
