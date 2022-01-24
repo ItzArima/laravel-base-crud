@@ -19,7 +19,7 @@ Route::get('/', 'ComicController@home')->name('home');
 Route::get('/comics', 'ComicController@comics')->name('comics');
 
 
-//posts//
+//comics//
 
 Route::get('posts' , 'Admin\Postcontroller@index')->name('admin.posts.index');
 
@@ -34,3 +34,19 @@ Route::get('posts/{comic}/edit' , 'Admin\PostController@edit')->name('admin.post
 Route::put('posts/{comic}' , 'Admin\PostController@update')->name('admin.posts.update');
 
 Route::delete('posts/{comic}' , 'Admin\PostController@destroy')->name('admin.posts.destroy');
+
+//videos//
+
+Route::get('videos' , 'Admin\Videocontroller@index')->name('admin.videos.index');
+
+Route::get('videos/create' , 'Admin\VideoController@create')->name('admin.videos.create');
+
+Route::post('videos/update' , 'Admin\VideoController@store')->name('admin.videos.store');
+
+Route::get('videos/{video}' , 'Admin\VideoController@show')->name('admin.videos.show');
+
+Route::get('videos/{video}/edit' , 'Admin\VideoController@edit')->name('admin.videos.edit');
+
+Route::put('videos/{video}' , 'Admin\VideoController@update')->name('admin.videos.update');
+
+Route::delete('videos/{video}' , 'Admin\VideoController@destroy')->name('admin.videos.destroy');

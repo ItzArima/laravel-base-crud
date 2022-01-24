@@ -16,7 +16,29 @@ main .hide {
   filter: opacity(0);
 }
 
+main .table-container {
+  display: flex;
+}
+
+main .table-container .admin-sections {
+  width: 25%;
+  border: 2px solid #0282f9;
+  border-left: 0;
+}
+
+main .table-container .admin-sections > div {
+  padding: 2rem 1rem;
+  border-bottom: 2px solid #0282f9;
+}
+
+main .table-container .admin-sections > div a {
+  text-decoration: none;
+  color: #0282f9;
+  font-weight: 600;
+}
+
 main .table-container .table {
+  width: 75%;
   padding: 2rem 5rem;
 }
 
