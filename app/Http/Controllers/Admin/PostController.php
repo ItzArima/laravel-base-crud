@@ -47,7 +47,7 @@ class PostController extends Controller
         $new->type = $request->type;
         $new->save();
 
-        return redirect(route('admin.posts.index'));
+        return redirect(route('admin.posts.index'))->with(session()->flash('success' , 'Comic created succesfully'));
     }
 
     /**

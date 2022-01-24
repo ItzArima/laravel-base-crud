@@ -115,10 +115,10 @@
                                 <p>{{$video->duration}}</p>
                             </div>
                             <div class="actions">
-                                <form action="{{route('admin.posts.show' , $video->id)}}" method="get">
+                                <form action="{{route('admin.videos.show' , $video->id)}}" method="get">
                                     <input type="submit" value="View">
                                 </form>
-                                <form action="{{route('admin.posts.edit' , $video->id)}}">
+                                <form action="{{route('admin.videos.edit' , $video->id)}}">
                                     <input type="submit" value="Edit">
                                 </form>
                                 <div class="delete" onclick="show({{$key}})">
@@ -129,7 +129,7 @@
                                 <div class="content">
                                     <h1>Are you sure?</h1>
                                     <p>After deletion data will be forever lost</p>
-                                    <form action="{{route('admin.posts.destroy' , $video->id)}}" method="post">
+                                    <form action="{{route('admin.videos.destroy' , $video->id)}}" method="post">
                                         @csrf
                                         @method('DELETE')
                                         <input type="submit" value="Delete">
@@ -155,7 +155,7 @@
         @if(isset($comicses))
             <a href="{{route('admin.posts.create')}}">Add A Comics</a>
         @elseif(isset($videos))
-            <a href="{{route('admin.posts.create')}}">Add A Video</a>
+            <a href="{{route('admin.videos.create')}}">Add A Video</a>
         @endif
         </div>
     </main>

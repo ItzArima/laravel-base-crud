@@ -26,7 +26,7 @@ class VideoController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin/create');
     }
 
     /**
@@ -37,7 +37,14 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $new = new Video();
+        $new->title = $request->title;
+        $new->owner = $request->owner;
+        $new->duration = $request->duration;
+        $new->type = $request->type;
+        $new->save();
+
+        return redirect(route('admin.videos.index'))->with(session()->flash('success' , 'Video created succesfully'));
     }
 
     /**
@@ -48,7 +55,7 @@ class VideoController extends Controller
      */
     public function show(Video $video)
     {
-        //
+        return view('admin/show' , compact('video'));
     }
 
     /**
